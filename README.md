@@ -27,9 +27,13 @@ You can start developing by editing the files inside the **app** directory. This
 
 ## Checklist
 
-- [ ] Set up basic navigation and routing
+- [x] Set up basic navigation and routing
 - [ ] Implement core UI components
 - [ ] Design and implement chat interface
 - [ ] Deploy LangGraph to the cloud
 - [ ] Set up LangGraph backend integration
 - [ ] Testing and debugging
+
+## NOTE on Dev
+
+- app doesn't use `expo-router` for navigation, instead it uses `react-navigation` for navigation. This is because of limitations in `expo-router` for customization.
