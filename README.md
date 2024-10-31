@@ -29,6 +29,9 @@ You can start developing by editing the files inside the **app** directory. This
 
 - [x] Set up basic navigation and routing
 - [ ] Implement core UI components
+  - [x] Home screen
+  - [ ] Diary upload screen
+  - [ ] Diary Chat screen
 - [ ] Design and implement chat interface
 - [ ] Deploy LangGraph to the cloud
 - [ ] Set up LangGraph backend integration
