@@ -1,35 +1,52 @@
+import CustomButton from "@/components/ui/CustomButton";
+import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 
-import { Image, StyleSheet, Platform, SafeAreaView, Text } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Platform,
+  SafeAreaView,
+  Text,
+  View,
+} from "react-native";
 
-import { HelloWave } from "@/components/HelloWave";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
+const AppTitle = require("../assets/images/ourHour.png");
+const HomeSquirrel = require("../assets/images/home-squirrel.png");
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView>
-      <Text>Home</Text>
-    </SafeAreaView>
+    <LinearGradient
+      colors={["rgba(245, 245, 245, 1)", "rgba(249, 255, 238, 1)"]}
+      style={styles.safeArea}
+    >
+      <SafeAreaView style={styles.safeArea}>
+        <View style={styles.container}>
+          {/* ourHour logo */}
+          <Image source={AppTitle} />
+
+          {/* "Start Talking Button" */}
+
+          <CustomButton text="Start Talking" onClick={() => {}} />
+
+          {/* Image */}
+          <Image source={HomeSquirrel} />
+        </View>
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: "row",
+  safeArea: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
     alignItems: "center",
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+    justifyContent: "flex-end",
+    rowGap: 62.5,
+
+    paddingTop: 158,
   },
 });
